@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">UCLL-gip5-groep7</string>
+
+    <!-- Login page texts -->
+    <string name="username">Username...</string>
+    <string name="password">Password...</string>
+    <string name="signIn">Sign in</string>
+    <string name="register">No account? Register here!</string>
+    <string name="loginTitle">Video Link Storage</string>
+    <string name="forgotPassword">Forgot password?</string>
+
+    <!-- title video -->
+    <string name="titleVideo">Title video</string>
+    <string name="url" translatable="false">Url sample here</string>
+
+    <!-- bottom nav menu items -->
+    <string name="logout">Logout</string>
+    <string name="profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+
+    <!-- fab menu items -->
+    <string name="upload">Logout</string>
+    <string name="download">Profile</string>
+    <string name="copyUrl">Search</string>
+    <string name="delete">Settings</string>
+
+    <!-- floating action button -->
+    <string name="add">add</string>
+    <string name="dummy_button" translatable="false">Dummy Button</string>
+    <string name="dummy_content" translatable="false">DUMMY\nCONTENT</string>
+
+    <!-- Alertdialog MainActivity -->
+    <string name="alertTitleMain">All login attemps used!</string>
+    <string name="alertMsgMain">Your account is blocked.</string>
+
+</resources>

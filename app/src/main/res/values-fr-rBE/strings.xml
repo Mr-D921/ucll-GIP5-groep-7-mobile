@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UCLL-gip5-groep7</string>
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="password">Mot de passe</string>
+    <string name="signIn">connexion</string>
+    <string name="register">Pas de compte? Inscrivez-vous ici!</string>
+    <string name="loginTitle">Enregistrer le lien vidéo</string>
+    <string name="forgotPassword">Vous avez oublié votre mot de passe?</string>
+    <string name="titleVideo">Titre</string>
+    <string name="add">ajouter</string>
+    <string name="delete">supprimer</string>
+    <string name="copyUrl">copierlelien</string>
+    <string name="download">Télécharger</string>
+    <string name="upload">télécharger</string>
+    <string name="settings">établissements</string>
+    <string name="logout">Se déconnecter</string>
+    <string name="profile">Profil</string>
+    <string name="search">pour rechercher</string>
+</resources>
