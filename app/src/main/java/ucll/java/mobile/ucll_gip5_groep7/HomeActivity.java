@@ -26,11 +26,17 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.json.JSONObject;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
+import ucll.java.mobile.ucll_gip5_groep7.Models.Video;
 import ucll.java.mobile.ucll_gip5_groep7.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
@@ -43,7 +49,11 @@ public class HomeActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     private BottomAppBar btmAppBar;
     private BottomNavigationView btmNavView;
 
-    public String url = "";
+    private Video video;
+    private RecyclerView videoRecycleView;
+    private GalaryAdapter1 galaryAdapter1;
+
+    public String url = "http://localhost:8180/";
     private RequestQueue queue = Volley.newRequestQueue(this);
 
     @Override
@@ -52,9 +62,17 @@ public class HomeActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         setContentView(R.layout.activity_home);
         Log.d(TAG, "Application run successful!");
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_fragment1);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        List<Video> videos = new ArrayList<>();
+        videos = getData();
+
+        videoRecycleView = (RecyclerView) findViewById(R.id.videoView);
+
+        galaryAdapter1 = new GalaryAdapter1(videos, getApplication());
+        videoRecycleView.setAdapter(galaryAdapter1);
+        videoRecycleView.setLayoutManager(new LinearLayoutManager(HomeActivity.this));
+
+        // list of uploaded video's
+        videoRecycleView = findViewById(R.id.videoView);
 
         // floating action button
         fab = findViewById(R.id.fab);
@@ -104,15 +122,22 @@ public class HomeActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             JSONObject jsono = (JSONObject) response;
             Log.d(TAG, jsono.toString());
 
-//            WeatherSearch ws = new Gson().fromJson(jsono.toString(), WeatherSearch.class);
-
         }
     }, new Response.ErrorListener() {
         @Override
         public void onErrorResponse(VolleyError error) {
-//            showAlert(R.string.message_network, error.getMessage());
             Log.e(TAG, error.getMessage());
         }
     });
 //     queue.add(jsonObjectRequest);
+
+    private List<Video> getData(){
+        List<Video> videoList = new ArrayList<>();
+        LocalDateTime uploadtimer = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            uploadtimer = LocalDateTime.parse("2023-03-10");
+        }
+        videoList.add(new Video("Java: gevorderd", 1000, 3, uploadtimer));
+        return videoList;
+    }
 }

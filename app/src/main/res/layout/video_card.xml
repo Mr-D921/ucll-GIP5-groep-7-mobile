@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="155dp">
+    
+    <TextView
+        android:id="@+id/videoTitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+        android:text="@string/titleVideo"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:maxLines="1" />
+
+    <ImageView
+        android:id="@+id/videoPic"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/videoTitle"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_baseline_person_24"
+        android:contentDescription="@string/titleVideo" />
+
+    <TextView
+        android:id="@+id/personName"
+        android:layout_toEndOf="@+id/videoPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoTitle"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="@string/username"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/videoPic2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/personName"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_baseline_access_time_24"
+        android:contentDescription="@string/titleVideo" />
+
+    <TextView
+        android:id="@+id/viewsCount"
+        android:layout_toEndOf="@+id/videoPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/personName"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="@string/username"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/videoPic3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/viewsCount"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_baseline_access_time_24"
+        android:contentDescription="@string/titleVideo"/>
+
+    <TextView
+        android:id="@+id/uploadDate"
+        android:layout_toEndOf="@+id/videoPic2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewsCount"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="@string/username"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/videoPic4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/uploadDate"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_baseline_access_time_24"
+        android:contentDescription="@string/titleVideo"/>
+
+    <TextView
+        android:id="@+id/videoDuration"
+        android:layout_toEndOf="@+id/videoPic3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uploadDate"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="@string/username"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

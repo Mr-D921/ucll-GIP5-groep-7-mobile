@@ -3,9 +3,12 @@ package ucll.java.mobile.ucll_gip5_groep7;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +18,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Params for views and logs
     private static final String TAG = "MainActivity";
     private TextView loginTitle;
     private EditText username;
@@ -22,9 +26,12 @@ public class MainActivity extends AppCompatActivity {
     private Button signIn;
     private TextView registerHere;
     private TextView forgotPassword;
+
+    // Param for Alert dialog and login attempts
     private int signInAttempts = 3;
     private AlertDialog.Builder builder;
 
+    // Initiate app
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Initiate start application
@@ -42,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
         // create alert screen
         builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setTitle("Title");
-        builder.setMessage("Message");
+        builder.setTitle(R.string.alertTitleMain);
+        builder.setMessage(R.string.alertMsgMain);
         builder.setNegativeButton("Leave app", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
