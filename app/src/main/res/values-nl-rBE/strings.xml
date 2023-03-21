@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UCLL-gip5-groep7-mobile</string>
+    <string name="first_fragment_label">Eerste Fragment</string>
+    <string name="second_fragment_label">Tweede Fragment</string>
+    <string name="action_settings">Instellingen</string>
+    <string name="next">Volgend</string>
+    <string name="previous">Vorige</string>
+    <string name="username">Gebruikersnaam...</string>
+    <string name="password">Passwoord...</string>
+    <string name="signIn">Inloggen</string>
+    <string name="register">Geen account? Registreer hier!</string>
+    <string name="forgotPassword">Passwoord vergeten?</string>
+    <string name="loginTitle">Video Link Oplsag</string>
+    <string name="alertTitleLogin">Gebruikersnaam...</string>
+    <string name="alertMsgLogin">Passwoord</string>
+    <string name="action_languages">Talen</string>
+    <string name="action_logout">Uitloggen</string>
+    <string name="videoTitle">Video Titel</string>
+    <string name="title_activity_settings">InstellingenActivity</string>
+    <string name="messages_header">Berichten</string>
+    <string name="signature_title">Uw handtekening</string>
+    <string name="reply_title">Standard antwoord actie</string>
+    <string name="sync_title">Sync e-mail tijdelijk</string>
+    <string name="attachment_title">Download inkomende bijlage</string>
+    <string name="attachment_summary_on">Download bijlage automatisch</string>
+    <string name="attachment_summary_off">Download bijlage</string>
+</resources>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">UCLL-gip5-groep7-mobile</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="username">Username...</string>
+    <string name="password">Password...</string>
+    <string name="signIn">Sign in</string>
+    <string name="register">No account? Register here!</string>
+    <string name="forgotPassword">Forgot password?</string>
+    <string name="loginTitle">Video Link Storage</string>
+
+    <!-- alert dialog login screen -->
+    <string name="alertTitleLogin">Username...</string>
+    <string name="alertMsgLogin">Password...</string>
+
+    <string name="action_languages">Languages</string>
+    <string name="action_logout">Logout</string>
+    <string name="title_activity_main2" translatable="false">MainActivity2</string>
+
+    <!-- dummy content recycleView -->
+    <string name="videoTitle">Video Title</string>
+    <string name="videoId" translatable="false">Video ID</string>
+
+    <!-- CRUD action button(s) acronyms -->
+    <string name="deleteVideo" translatable="false">DEL</string>
+    <string name="addVideo" translatable="false">ADD</string>
+    <string name="updateVideo" translatable="false">UPD</string>
+    <string name="getVideo" translatable="false">GET</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header" translatable="false">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+</resources>
