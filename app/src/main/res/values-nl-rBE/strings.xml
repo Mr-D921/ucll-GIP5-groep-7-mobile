@@ -25,4 +25,6 @@
     <string name="attachment_title">Download inkomende bijlage</string>
     <string name="attachment_summary_on">Download bijlage automatisch</string>
     <string name="attachment_summary_off">Download bijlage</string>
+    <string name="langOne">Engels</string>
+    <string name="langTwo">Nederlands</string>
 </resources>

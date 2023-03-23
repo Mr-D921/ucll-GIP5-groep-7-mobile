@@ -1,7 +1,10 @@
 package ucll.java.mobile.ucll_gip5_groep7_mobile;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,6 +29,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import ucll.java.mobile.ucll_gip5_groep7_mobile.Models.Video;
 import ucll.java.mobile.ucll_gip5_groep7_mobile.databinding.ActivityMainBinding;
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    private String url = "";
+    private String url = "http://localhost:8080/api/";
 
     private JsonObjectRequest jsonObjectRequest;
 
@@ -136,6 +140,15 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    private void SetLocale(String language){
+        Resources resources = getResources();
+        DisplayMetrics displayMetrics = resources.getDisplayMetrics();
+        Configuration configuration = resources.getConfiguration();
+        configuration.locale = new Locale(language);
+        resources.updateConfiguration(configuration, displayMetrics);
+        onConfigurationChanged(configuration);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -154,6 +167,14 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.action_logout) {
             loginScreen();
+        }
+
+        if(id == R.id.langEnglish){
+            SetLocale("en");
+        }
+
+        if(id == R.id.langDutch){
+            SetLocale("nl");
         }
 
         return super.onOptionsItemSelected(item);

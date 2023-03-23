@@ -58,7 +58,8 @@ public class LoginActivity extends AppCompatActivity {
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
+                if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")
+                || username.getText().toString().equals("user") && password.getText().toString().equals("user")){
                     //login is successful!
                     Toast.makeText(LoginActivity.this, "Logging succesfull!", Toast.LENGTH_LONG).show();
                     Log.d(TAG, "Logging in successful!");
